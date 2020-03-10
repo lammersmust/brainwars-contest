@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="img/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <title>Scoreboard - Brain Wars</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+<div class="header">
+    <div class="header__navigation">
+        <a href="index.html"><img src="img/logo.png" alt="Logo" class="navigation__logo"></a>
+        <ul class="navigation__menu">
+            <li class="menu__item"><a href="rules.html" class="item__link">Rules</a></li>
+            <li class="menu__item"><a href="judges.html" class="item__link">Judges</a></li>
+            <li class="menu__item"><a href="scoreboard.html" class="item__link">Scoreboard</a></li>
+            <li class="menu__item"><a href="statistics.html" class="item__link">Statistics</a></li>
+        </ul>
+    </div>
+    <div class="header__notice">
+        <span class="highlighted">Brain Wars Contest&nbsp;</span>
+        <span class="notice__message">— Registration is closed</span>
+        <a href="tests.html" class="notice__download highlighted">Tests here →</a>
+    </div>
+</div>
+<div class="page__name buffer__bottom separator_bottom">
+    <h1 class="page__heading">Contest Scoreboard</h1>
+    <div class="page__paragraph">
+        <p>The board of judges declared the results of <span class="bold">Ivan Novikov</span> as the most high-performance, resourceless and reliable, ideally meet all the requirements of the competition.</p>
+    </div>
+</div>
+<div class="participants">
+    <table class="participants__table">
+        <thead>
+        <tr>
+            <th>Rank</th>
+            <th class="text_left">Expert</th>
+            <th class="text_left">Country</th>
+            <th class="text_left">Title</th>
+            <th>Score</th>
+        </tr>
+        </thead>
+        <tbody class="participants__tbody text_center">
+        </tbody>
+    </table>
+</div>
+<div class="footer">
+    <a href="index.html"><img src="img/logo.png" alt="Logo" class="footer__logo"></a>
+    <span class="contest__name highlighted">Brain Wars</span>
+    <p class="footer__contacts">For questions and suggestions — <a href="mailto:support@brainwars.co" class="footer__link">support@brainwars.co</a></p>
+</div>
+</body>
+<script type="text/javascript" src="js/participants.js"></script>
+<script type="text/javascript" src="js/scoreboard.js"></script>
+</html>

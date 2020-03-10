@@ -1,0 +1,342 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: normal;
+    margin: 0;
+}
+
+.header__navigation {
+    margin-top: 30px;
+}
+
+.navigation__logo, .footer__logo {
+    width: 33px;
+}
+
+.navigation__menu {
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+}
+
+.menu__item {
+    display: inline;
+    margin: 0 10px;
+}
+
+.item__link, .footer__link {
+    text-decoration: none;
+    font-size: 14px;
+    color: #666;
+}
+
+.item__link:hover, .footer__link:hover {
+    color: #000;
+    fill: #000;
+}
+
+.header__notice,
+.intro,
+.statistics,
+.footer,
+.header__navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header__notice {
+    height: 50px;
+    margin-top: 20px;
+    background: #fafbfc;
+    font-size: 14px;
+}
+
+.highlighted {
+    font-weight: 600;
+}
+
+.notice__message:after {
+    content: "|";
+    margin: 0 20px;
+}
+
+.notice__download {
+    text-decoration: none;
+    color: #000;
+}
+
+.intro {
+    padding: 50px;
+    flex-wrap: wrap;
+}
+
+.intro__text {
+    width: 600px;
+    margin-right: 50px;
+}
+
+.intro__heading {
+    font-size: 41px;
+}
+
+.intro__image {
+    height: 450px;
+}
+
+.involved,
+.congratulations,
+.participants,
+.rules,
+.epilogue,
+.tests__list,
+.page__name,
+.judges__about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.involved {
+    background: #fafbfc;
+    padding: 70px;
+}
+
+.involved__heading {
+    margin: 0 0 10px 0;
+}
+
+.involved__paragraph {
+    width: 800px;
+    text-align: center;
+}
+
+.intro__paragraph, .involved__paragraph {
+    line-height: 1.7;
+}
+
+.involved__button {
+    margin-top: 30px;
+}
+
+.button {
+    display: inline-block;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 38px;
+    white-space: nowrap;
+    min-width: 175px;
+    height: 40px;
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+    background-color: #0070F3;
+    text-decoration: none;
+    padding: 0 10px;
+    border-radius: 5px;
+    font-weight: 600;
+    box-shadow: rgba(0, 0, 0, 0.12) 0 5px 10px;
+}
+
+.statistics {
+    padding: 70px;
+}
+
+.statistics__wrapper {
+    margin-right: 40px;
+    height: 376px;
+    max-width: 246px;
+    border: 1px solid #f6f6f6;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.statistics__item {
+    margin: 30px;
+}
+
+.footer {
+    height: 120px;
+    background: #fafbfc;
+}
+
+.footer__contacts,
+.contest__name {
+    font-size: 14px;
+}
+
+.footer__contacts {
+    color: #666;
+    margin-left: 100px;
+}
+
+.contest__name {
+    margin: 0 10px;
+}
+
+.participants {
+    margin: 30px 0;
+}
+
+.participants__table {
+    width: 60%;
+    border-collapse: separate;
+    border-spacing: 10px;
+    margin-bottom: 50px;
+}
+
+.participants__about {
+    background: #fafbfc;
+    margin: 10px 0 50px 0;
+}
+
+.text_center {
+    text-align: center;
+}
+
+.text_left {
+    text-align: left;
+}
+
+.text_right {
+    text-align: right;
+}
+
+.rules,
+.epilogue,
+.tests__list {
+    margin: 30px 0;
+}
+
+.test__item,
+.rules__text,
+.epilogue__text {
+    width: 60%;
+}
+
+.page__heading {
+    font-size: 41px;
+    margin: 60px 0 10px 0;
+}
+
+.page__paragraph {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 14px;
+    color: #666;
+    width: 600px;
+}
+
+.requirements__list,
+.judge__item {
+    display: flex;
+    flex-direction: row;
+}
+
+.requirements__list {
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0 30px;
+    max-width: 1000px;
+    margin: 0 0 30px 0;
+}
+
+.requirement__item {
+    list-style: none;
+    position: relative;
+    padding: 0 0 0 40px;
+    width: 250px;
+    margin: 20px 0 20px 40px;
+}
+
+.requirement__item:before {
+    background: transparent url(../img/check.png) no-repeat scroll center center;
+    background-size: cover;
+    content:"";
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    left: -10px;
+    top: 0;
+}
+
+.bold {
+    font-weight: 600;
+    color: #000;
+}
+
+.separator_bottom {
+    border-bottom: 1px solid rgb(234, 234, 234);
+}
+
+.judges__about {
+    margin-top: 30px;
+}
+
+.judges__subtitle {
+    color: #0076ff;
+    font-size: 14px;
+    line-height: 26px;
+    text-transform: uppercase;
+}
+
+.judges__title {
+    margin: 30px 0 0 0;
+}
+
+.judges__list {
+    margin: 30px 0;
+}
+
+.judge__item {
+    margin: 30px 0;
+}
+
+.avatar {
+    width: 100px;
+    border-radius: 50%;
+}
+
+.judge__photo {
+    margin-right: 50px;
+}
+
+.judge__about {
+    width: 600px;
+}
+
+.judge__name {
+    margin: 0;
+    font-weight: 600;
+}
+
+.judge__job {
+    margin-top: 0;
+    color: #666;
+}
+
+.buffer__bottom {
+    padding-bottom: 30px;
+}
+
+.tests__list {
+    margin: 40px 0;
+}
+
+.test__heading {
+    margin-top: 50px;
+}
+
+.tests__table {
+    margin: 1.5em 0;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tests__table, .tests__table td, .tests__table th {
+    border: 1px solid #d5dddf;
+}
+
+.tests__table td, .tests__table th {
+    padding: 6px 12px 9px;
+    vertical-align: top;
+    line-height: 1.5;
+}

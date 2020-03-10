@@ -1,1 +1,1 @@
-# brainwars-contest
+# Brain Wars contest

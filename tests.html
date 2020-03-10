@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="img/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <title>Tests - Brain Wars</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+<div class="header">
+    <div class="header__navigation">
+        <a href="index.html"><img src="img/logo.png" alt="Logo" class="navigation__logo"></a>
+        <ul class="navigation__menu">
+            <li class="menu__item"><a href="rules.html" class="item__link">Rules</a></li>
+            <li class="menu__item"><a href="judges.html" class="item__link">Judges</a></li>
+            <li class="menu__item"><a href="scoreboard.html" class="item__link">Scoreboard</a></li>
+            <li class="menu__item"><a href="statistics.html" class="item__link">Statistics</a></li>
+        </ul>
+    </div>
+    <div class="header__notice">
+        <span class="highlighted">Brain Wars Contest&nbsp;</span>
+        <span class="notice__message">— Registration is closed</span>
+        <a href="tests.html" class="notice__download highlighted">Tests here →</a>
+    </div>
+</div>
+<div class="page__name buffer__bottom separator_bottom">
+    <h1 class="page__heading">Contest Tests</h1>
+    <p class="page__paragraph ">This is algorithmic tasks from competition of this year that you can consider and try to solve.</p>
+</div>
+<div class="tests__list">
+    <div class="test__item">
+        <p>You won’t be able to validate your results online but it helps to be more prepared for the next competition.</p>
+        <h2 class="test__heading">Task A. Mountain task</h2>
+        <table class="tests__table">
+            <thead>
+            <tr>
+                <th>Input File Name</th>
+                <th>Output File Name</th>
+                <th>Time limit</th>
+                <th>Memory limit</th>
+            </tr>
+            </thead>
+            <tbody class="text_center">
+            <tr>
+                <td>standard input</td>
+                <td>standard output</td>
+                <td>5 seconds (13 for java)</td>
+                <td>512 megabytes</td>
+            </tr>
+            </tbody>
+        </table>
+        <p>Tired of programming contests and solving algorithmic problems, Arkady decided to take a short pause and radically change his occupation. Our hero has always been attracted to the mountains, therefore, using the prize money earned at various competitions, he bought himself a small ski resort and started preparing him for the winter season.</p>
+        <p>The only route available is n control points numbered from \(1\) before \(n\). Control point \(i\) is on top \(h_i\) and no two points are at the same height. Since there is only one lift on the track, the descent always starts at the control point number \(s\) and ends in the checkpoint number t. Some \(m\) pairs of control points are connected by sections of the route that lead from a higher control point to a lower one.</p>
+        <p>The attractiveness of the section of the route directly connecting the control point \(u\) with control point \(v\), is equal to the height difference of points, i.e. \(h_u - h_v\). In this case, the attractiveness of the route, consistently visiting checkpoints \(v_1, v_2, \ldots, v_k\), is called the minimum of the attractiveness of its sites, that is, the minimum among the values \(h_{v_1} - h_{v_2}, h_{v_2} - h_{v_3}, \ldots, h_{v_k} - h_{v_{k - 1}}\)</p>
+        <p>Tourists visiting the resort of Arkady, on the one hand, are concerned about the attractiveness of the route, and on the other — its length, which is defined as the number of sections of the route in the route. Since Arkady is no longer strong in solving this kind of problems, then it is you who will have to calculate for each possible route length. \(x\) from \(1\) before \(n - 1\) the greatest possible attraction of the route from \(s\) at \(t\) having a length of <b>at least</b> \(x\).</p>
+        <h3>Input Format</h3>
+        <p>The first line of the input contains four integers. \(n\), \(m\), \(s\) and \(t\) (\(2 \leq n \leq 100\,000\), \(2 \leq n \leq 100\,000\), \(1 \leq s, t \leq n\), \(s \ne t\)) — the number of control points on the track, the number of sections of the track, the number of the starting control point and the number of the final control point, respectively.</p>
+        <p>The second line contains \(n\) different integers \(h_1, h_2, \ldots, h_n\)(\(0 \leq h_i \leq 100\,000\)) — heights at which control points are located.</p>
+        <p>Followed by \(m\) lines describing sections of the route. AT \(i\) th of them recorded two numbers \(u_i\) and \(v_i\) (\(1 \leq u_i, v_i \leq n\),\(u_i \ne v_i\)) meaning \(i\) section of the route goes from the control point \(u_i\) to the checkpoint \(v_i\). It is guaranteed that no two sections of the route connect directly the same pair of control points that the height of the control point \(u_i\) more than the height of the control point \(v_i\), and that there is at least one route from the control point \(s\) to control point \(t\).</p>
+        <h3>Output Format</h3>
+        <p>Output \(n - 1\) numbers one per line \(i\) of which should be equal to the maximum possible attractiveness of the route from \(s\) at \(t\) having a length of at least \(i\). If for some \(i\) there is no route no less than \(i\) then output in the appropriate line \(-1\).</p>
+        <h3>Examples</h3>
+        <table class="tests__table">
+            <thead>
+            <tr>
+                <th>Standard input</th>
+                <th>Standard output</th>
+            </tr>
+            </thead>
+            <tbody class="text_left">
+            <tr>
+                <td>4 4 2 4<br>
+                    3 4 2 1<br>
+                    2 4<br>
+                    2 1<br>
+                    1 3<br>
+                    3 4
+                </td>
+                <td>3<br>
+                    1<br>
+                    1
+                </td>
+            </tr>
+            <tr>
+                <td>3 2 1 3<br>
+                    3 2 1<br>
+                    1 2<br>
+                    1 3<br>
+                </td>
+                <td>2<br>
+                    -1<br>
+                </td>
+            </tr>
+            <tr>
+                <td>5 10 1 5<br>
+                    8 6 4 3 1<br>
+                    1 2<br>
+                    1 3<br>
+                    1 4<br>
+                    1 5<br>
+                    2 3<br>
+                    2 4<br>
+                    2 5<br>
+                    3 4<br>
+                    3 5<br>
+                    4 5<br>
+                </td>
+                <td>7<br>
+                    3<br>
+                    2<br>
+                    1<br>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <h3>Comment</h3>
+        <p>In the first example, there is a direct part of the route from the starting control point to the final one. The appeal of this route is \(3\) and length \(1\). There is also a length path \(3\) passing through checkpoints \(2\), \(1\), \(3\) and \(4\) with attractiveness equal \(1\). For \(x = 2\) the answer will be the given path of length \(3\) because it is the most attractive way of at least \(2\).</p>
+    </div>
+    <div class="test__item">
+        <h2 class="test__heading">Task B. Unmanned vehicle</h2>
+        <table class="tests__table">
+            <thead>
+            <tr>
+                <th>Input File Name</th>
+                <th>Output File Name</th>
+                <th>Time limit</th>
+                <th>Memory limit</th>
+            </tr>
+            </thead>
+            <tbody class="text_center">
+            <tr>
+                <td>standard input</td>
+                <td>standard output</td>
+                <td>4 seconds</td>
+                <td>512 megabytes</td>
+            </tr>
+            </tbody>
+        </table>
+        <p>As you know, Yandex has recently been developing an unmanned vehicle, in which some of the contestants present in Moscow have a chance to see for themselves. Production of an unmanned vehicle is impossible without rigorous testing at a specially equipped landfill site. As part of this task, you will be asked to check the possibilities for moving an unmanned vehicle around a landfill that has a tree view.</p>
+        <p>Polygon consists of \(n\) sites connected \(n - 1\) by roads. Sites are numbered from \(1\) before \(n\) and the unmanned vehicle is initially on \(1\) th site. The purpose of testing is to spend the car for the minimum time on a route that passes through each of the sites at least once, if it is known that the car passes one road in one minute, and the time for turns and turns can be neglected.</p>
+        <p>The task is complicated by the fact that in the framework of this experiment, navigation can be carried out only by special radio beacons. At each site there is a radio beacon, with the charge of the included radio beacon located on the site \(i\), grabs exactly on \(a_i\) minutes Being turned off, the beacon does not spend the charge. Initially, all radio beacons are turned off.</p>
+        <p>The process of moving is as follows. Only one beacon can be switched on at a time. If at the beginning of the minute the car is on site \(i\) and the beacon is located on the site \(j\) and included for \(t\) minutes then the car moves on \(t\) roads in the direction of reducing the distance to the site \(j\). If the car is already on the same site with the beacon, then nothing happens. Each beacon can be switched on for an integer number of minutes, an arbitrary number of times.</p>
+        <p>Determine whether it is possible to draw up a plan for switching on and off beacons in such a way that the car visits all the sites at least once, and if so, find the minimum number of minutes required for this. Return to the original site is <b>not required</b>.</p>
+        <h3>Input Format</h3>
+        <p>The first line contains an integer \(n\)(\(1 \leq n \leq 200\,000\)) — the number of sites.</p>
+        <p>The second line contains integers \(a_1, a_2, \ldots, a_n\) (\(0 \leq a_i \leq 10^6\)), where \(a_i\) — the number of minutes for which there is enough charge in the beacon at the site \(i\).</p>
+        <p>In subsequent \(n - 1\) the lines contain descriptions of the roads, each of which consists of two integers \(u_i\) and \(v_i\) (\(1 \leq u_i, v_i \leq n\), \(u_i \neq v_i\)) — numbers of connected sites.</p>
+        <h3>Output Format</h3>
+        <p>If possible, output a single integer — the minimum time required to visit all sites. Otherwise, print the number \(-1\).</p>
+        <h3>Examples</h3>
+        <table class="tests__table">
+            <thead>
+            <tr>
+                <th>Standard input</th>
+                <th>Standard output</th>
+            </tr>
+            </thead>
+            <tbody class="text_left">
+            <tr>
+                <td>7<br>
+                    0 3 0 2 4 3 3<br>
+                    1 2<br>
+                    1 3<br>
+                    3 4<br>
+                    1 5<br>
+                    5 6<br>
+                    6 7<br>
+                </td>
+                <td>9</td>
+            </tr>
+            <tr>
+                <td>4<br>
+                    0 1 1 2<br>
+                    1 2<br>
+                    2 3<br>
+                    1 4<br>
+                </td>
+                <td>-1</td>
+            </tr>
+            </tbody>
+        </table>
+        <h3>Comment</h3>
+        <p>In the first test from the condition the following route is suitable, for example:</p>
+        <ul>
+            <li>For 2 minutes, we keep the radio beacon on site 4, as a result of which the car is on site 4, and the beacon is discharged.</li>
+            <li>For 3 minutes, we keep the radio beacon on at site 2, as a result of which the car is at site 2, and the beacon is discharged.</li>
+            <li>For 2 minutes, we keep the radio beacon on at site 5, as a result of which the car is at site 5, and the lighthouse has 2 minutes of charge.</li>
+            <li>For 2 minutes, we keep the radio beacon on at site 7, as a result of which the car is at site 7, and the lighthouse has 1 minute of charge.</li>
+        </ul>
+        <p>Thus, in 9 minutes you can visit all the sites.</p>
+    </div>
+    <div class="test__item">
+        <h2 class="test__heading">Task C. No less dense than required</h2>
+        <table class="tests__table">
+            <thead>
+            <tr>
+                <th>Input File Name</th>
+                <th>Output File Name</th>
+                <th>Time limit</th>
+                <th>Memory limit</th>
+            </tr>
+            </thead>
+            <tbody class="text_center">
+            <tr>
+                <td>standard input</td>
+                <td>standard output</td>
+                <td>3 seconds</td>
+                <td>512 megabytes</td>
+            </tr>
+            </tbody>
+        </table>
+        <p>The density of an undirected graph is a natural quantity, assumed to be equal to the ratio of the number of edges to the number of vertices. An important task in the study of various graphs taken, including from real life (such as the graph of friendships in a social network, graph co-authorship in a scientific environment, or a network of protein-protein interactions in bioinformatics), is finding dense subgraphs — that is, sets of vertices such that the restriction of the graph to this set has a high density. Finding high-density subgraphs is a well-studied, but quite challenging task, and we will offer you an unusual look at this plot — we will offer to find a subgraph of at least a given density.</p>
+        <p>Consider an undirected graph consisting of n vertices numbered with integers from \(1\) before \(n\) and \(m\) ribs \((u_{1}, v_{1}), (u_{2}, v_{2}), \ldots, (u_{m}, v_{m})\). Let a set of \(n\) nonnegative real numbers \(x_1, x_2, \ldots, x_n\), satisfying the condition \(x_1 + \ldots + x_n = 1\). Put:</p>
+        <p class="text_center">\(\lambda = \sum \limits_{i=1}^{m} \min\{x_{u_i}, x_{v_i}\}\)</p>
+        <p>It is required to find a subgraph of this graph having a density of at least \(\lambda\). Formally, it is required to find such a non-empty set of vertices \(A \subseteq \{1, 2, \ldots, n\}\), what  \(\frac{|E(A)|}{|A|} \geq \lambda\), where \(E(A) = \{(u_i, v_i)~\mid~u_i, v_i \in A\}\).</p>
+        <h3>Input Format</h3>
+        <p>The first line contains two integers. \(n\) and \(m\) (\(1 \leq n \leq 200\,000\), \(0 \leq m \leq 200\,000\)), the number of vertices and edges in the graph.</p>
+        <p>In the second line are \(n\) real numbers \(x_1, x_2, \ldots, x_n\) (\(x_i \geq 0\), \(x_1 + \ldots + x_n = 1\)), given with no more than six digits after the decimal point.</p>
+        <p>AT \(i\) of the next m rows are two integers \(u_i\), \(v_i\) (\(1 \leq u_i, v_i \leq n\), \(u_i \neq v_i\)), specifying vertices, connected \(i\)-m edge of the graph. It is guaranteed that there are no multiple edges and loops in the graph.</p>
+        <p>It is guaranteed that there is a subgraph in the graph that satisfies the requirement of the problem.</p>
+        <h3>Output Format</h3>
+        <p>In the first line print an integer \(k\) (\(1 \leq k \leq n\)) — the number of vertices in the desired set \(A\).</p>
+        <p>In the second line print \(k\) integers \(d_1, d_2, \ldots, d_k\) — the numbers of the vertices forming the density subgraph at least \(\lambda\).</p>
+        <p>Your answer will be recognized as correct if the density of the subgraph that you derived is not less than \(\lambda - 10^{-7}\). Vertices can be displayed in any order. If there are several possible answers, it is allowed to display any correct one.</p>
+        <h3>Examples</h3>
+        <table class="tests__table">
+            <thead>
+            <tr>
+                <th>Standard input</th>
+                <th>Standard output</th>
+            </tr>
+            </thead>
+            <tbody class="text_left">
+            <tr>
+                <td>4 4<br>
+                    0.2 0.1 0 0.7<br>
+                    1 2<br>
+                    2 3<br>
+                    3 1<br>
+                    3 4<br>
+                </td>
+                <td>3<br>
+                    1 2 4<br>
+                </td>
+            </tr>
+            <tr>
+            <tr>
+                <td>5 6<br>
+                    0.25 0 0.25 0.25 0.25<br>
+                    2 1<br>
+                    1 3<br>
+                    3 5<br>
+                    5 4<br>
+                    4 1<br>
+                    1 5<br>
+                </td>
+                <td>4<br>
+                    1 5 3 4
+                </td>
+            </tr>
+            </tr>
+            </tbody>
+        </table>
+        <h3>Comment</h3>
+        <p>In the first test of the condition:<br>\(\lambda = \min\{0.2, 0.1\} + \min\{0.1, 0\} + \min\{0, 0.2\} + \min\{0, 0.7\} = 0.1 + 0 + 0 + 0 = 0.1\)</p>
+        <p>In a subgraph consisting of vertices \(1\), \(2\) and \(4\), the only edge is present \((1, 2)\) therefore its density is \(1/3 > 0.1\)</p>
+        <p>In the second test from the condition:<br>\(\begin{eqnarray} \lambda = \min\{0, 0.25\} + \min\{0.25, 0.25\} + \min\{0.25, 0.25\} + \min\{0.25, 0.25\} + \min\{0.25, 0.25\} + \min\{0.25, 0.25\} \nonumber \\ = 0 + 0.25 + 0.25 + 0.25 + 0.25 + 0.25 = 1.25 \nonumber \end{eqnarray}\)</p>
+        <p>In a subgraph consisting of vertices \(1, 5, 3, 4\), there are \(5\) edges \((1, 3), (3, 5), (5, 4), (4, 1), (1, 5)\), therefore its density is \(5/4 = 1.25\).</p>
+    </div>
+    <div class="test__item">
+        <h2 class="test__heading">Task D. Shop hats</h2>
+        <table class="tests__table">
+            <thead>
+            <tr>
+                <th>Input File Name</th>
+                <th>Output File Name</th>
+                <th>Time limit</th>
+                <th>Memory limit</th>
+            </tr>
+            </thead>
+            <tbody class="text_center">
+            <tr>
+                <td>standard input</td>
+                <td>standard output</td>
+                <td>2 seconds</td>
+                <td>512 megabytes</td>
+            </tr>
+            </tbody>
+        </table>
+        <p>Lined in the shop window \(n\) hats numbered from left to right of \(1\) before \(n\). Hats are of three types: male, female and universal. Buyers enter the store one by one, and each next buyer may turn out to be both a man and a woman.</p>
+        <p>Each customer goes along the window from left to right and chooses the first hat that fits him. So, the male buyer will choose the leftmost among the men's and universal hats, and the female buyer will choose the leftmost among the female and universal hats. If there are no suitable hats in the shop window, the buyer leaves without buying. Every time someone buys one of the hats, the seller records the number of the hat purchased.</p>
+        <p>By the end of the day, all the hats were sold out, and the seller had a transposition of numbers from \(1\) before \(n\). How many options are there for this permutation? Since the answer can be quite large, determine the remainder of its division by \(10^9 + 7\).</p>
+        <h3>Input Format</h3>
+        <p>The first line contains a single integer. \(n\)(\(1 \leq n \leq 5000\)) — the number of hats in the window.</p>
+        <p>The second line is written \(n\) characters — types of hats in the order of numbering. The symbol "M" means a man's hat, the symbol "W" — a woman's hat, and the symbol "U" — a universal hat.</p>
+        <h3>Output Format</h3>
+        <p>Output the remainder of the answer divided by \(10^9 + 7\).</p>
+        <h3>Examples</h3>
+        <table class="tests__table">
+            <thead>
+            <tr>
+                <th>Standard input</th>
+                <th>Standard output</th>
+            </tr>
+            </thead>
+            <tbody class="text_left">
+            <tr>
+                <td>3<br>
+                    UMW<br>
+                </td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>3<br>
+                    MWU<br>
+                </td>
+                <td>4</td>
+            </tr>
+            </tbody>
+        </table>
+        <h3>Comment</h3>
+        <p>In the first example, the first buyer must buy the first hat (regardless of gender). The remaining two hats can be purchased in any order.</p>
+        <p>In the second example, the following permutations are possible: \((1, 2, 3)\), \((1, 3, 2)\), \((2, 1, 3)\), \((2, 3, 1)\).</p>
+    </div>
+    <div class="test__item">
+        <h2 class="test__heading">Task E. Time to share the stones</h2>
+        <table class="tests__table">
+            <thead>
+            <tr>
+                <th>Input File Name</th>
+                <th>Output File Name</th>
+                <th>Time limit</th>
+                <th>Memory limit</th>
+            </tr>
+            </thead>
+            <tbody class="text_center">
+            <tr>
+                <td>standard input</td>
+                <td>standard output</td>
+                <td>1 seconds</td>
+                <td>512 megabytes</td>
+            </tr>
+            </tbody>
+        </table>
+        <p>On one planet in a distant galaxy, the following legend exists:</p>
+        <p>At the beginning of time, the demiurge Jan Dex created a temple on the highest mountain in the world. In the center of the temple there is an altar on which lies a heap of \(n\) precious stones. Every morning, two priests — a teacher and a student — begin to divide these stones, taking a non-zero amount of stones from the pile in turn. The teacher makes the first move; while the student at any point in time can not have more stones than a teacher. As a result, the stones should be divided equally, and not a single stone should remain on the altar.</p>
+        <p>At the moment when the priests will not be able to perform the task, or they will exactly repeat all the actions taken during the division in one of the previous days, the evil spirit-destroyer Bug will be released and destroy the planet.</p>
+        <p>For a given amount of stones n calculate the maximum possible time for the existence of this world from the beginning of time to the coming of the Bag. Since the answer can be very large, output the remainder of its division by \(10^9 + 7\).</p>
+        <h3>Input Format</h3>
+        <p>Single line of input contains one integer \(n\) (\(1 \le n \le 10^6\)) — the number of gems on the altar.</p>
+        <h3>Output Format</h3>
+        <p>Print a single integer — the maximum possible time of the planet existence in accordance with the legend in days modulo \(10^9 + 7\).</p>
+        <h3>Examples</h3>
+        <table class="tests__table">
+            <thead>
+            <tr>
+                <th>Standard input</th>
+                <th>Standard output</th>
+            </tr>
+            </thead>
+            <tbody class="text_left">
+            <tr>
+                <td>6</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>0</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="test__item">
+        <h2 class="test__heading">Task F. Playing with XOR</h2>
+        <table class="tests__table">
+            <thead>
+            <tr>
+                <th>Input File Name</th>
+                <th>Output File Name</th>
+                <th>Time limit</th>
+                <th>Memory limit</th>
+            </tr>
+            </thead>
+            <tbody class="text_center">
+            <tr>
+                <td>standard input</td>
+                <td>standard output</td>
+                <td>2 seconds</td>
+                <td>512 megabytes</td>
+            </tr>
+            </tbody>
+        </table>
+        <p>Alice and Bob play with a list of \(n\) integers \(a_1, a_2, \ldots, a_n\).</p>
+        <p>First, Alice selects a positive integer \(k\) (not necessarily from the list) and reports it to Bob. Then Alice and Bob take turns in turns, taking the whole numbers from the list until the list is empty. <b>Bob</b> goes first.</p>
+        <p>At the end of the game, it is determined whether Alice can choose among her numbers a subset with a bitwise \(\operatorname{XOR}\)-sum exactly \(k\) and if so, she wins, otherwise Bob wins.</p>
+        <p>Help Alice determine which values \(k\), She can win in this exciting game.</p>
+        <h3>Input Format</h3>
+        <p>The first line contains a single integer. \(n\)(\(2 \leq n \leq 15\)).</p>
+        <p>The next line contains \(n\) integers \(a_1, a_2, \ldots, a_n\) (\(1 \leq a_i \leq 10^9\)).</p>
+        <h3>Output Format</h3>
+        <p>Print a single integer - the number of \(m\) values at which Alice wins.</p>
+        <p>In the next line print \(m\) integers in ascending order, denoting \(k\) values at which Alice wins.</p>
+        <h3>Examples</h3>
+        <table class="tests__table">
+            <thead>
+            <tr>
+                <th>Standard input</th>
+                <th>Standard output</th>
+            </tr>
+            </thead>
+            <tbody class="text_left">
+            <tr>
+                <td>4<br>
+                    3 1 3 2<br>
+                </td>
+                <td>3<br>
+                    1 2 3<br>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="footer">
+    <a href="index.html"><img src="img/logo.png" alt="Logo" class="footer__logo"></a>
+    <span class="contest__name highlighted">Brain Wars</span>
+    <p class="footer__contacts">For questions and suggestions — <a href="mailto:support@brainwars.co" class="footer__link">support@brainwars.co</a></p>
+</div>
+<script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML">
+</script>
+</body>
+</html>
